@@ -5,60 +5,70 @@
     <!-- Bootstrap and CSS here-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">  
-
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
   </head>
   <body>
-      <div id='app'>
 
+    <div class="container-fluid">
+
+      <div id='app'>    
+      
         <div id='headers'>
-          <!-- Title and subtitles! -->
-          <h1>Guessing Game!</h1>
-          <h2>Guess a number between 1-100</h2>
+          <h1 id='title'>Guessing Game!</h1>
+          <h2 id='subtitle'>Guess a number between 1-100</h2>
         </div>
 
         <div id='main'>
           <div id='input-parent'>
-            <!-- Player's guess input, and submit button -->
-            <input placeholder="#" maxlength='3' autofocus=autofocus></input>
-            <button>Go!</button>
+            <input id= "input" placeholder="?" maxlength='3' autofocus=autofocus></input>
+            <button type="button" class="btn btn-success" id='submit'>Go!</button>
           </div>
 
-          <div id=''>
-            <!-- unordered list of guesses -->
-            <ul class= "guess">
-              <li>*</li>
-              <li>*</li>
-              <li>*</li>
-              <li>*</li>
-              <li>*</li>
+          <div id='guesses'>
+            <ul class= "guess-list">
+              <li class='guess'></li>
+              <li class='guess'></li>
+              <li class='guess'></li>
+              <li class='guess'></li>
+              <li class='guess'></li>
             </ul>
           </div>
 
           <div id="menu-btns">
-            <!-- reset and hint buttons -->
-            <button>Reset</button>
-            <button>Hint</button>
+            <button type="button" class="btn btn-warning" id='reset'>Reset</button>
+            <button type="button" class="btn btn-info" id='hint'>Hint</button>
           </div>
         </div>
       </div>
+     
 
-    <div id='footer'>
-        <div>
-          <div class='fs-logo'>
-            <img src='fa-logo@2x.png'></img>
-          </div>
-
-          <div class='author'>
-            <h4>Project by Alexander Tatarinov</h4>
-          </div>
-
-          <div class='gh-logo'>
-            <img src='grace_hopper_academy.png'></img>
-          </div>
-
-
+      <div class= "container-fluid">
+        <div id='footer'>  
+          <div class="row">
+                <div class="col-4">
+                    <div class='fs-logo'>
+                        <img src='fa-logo@2x.png'></img>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class='author'>
+                        <h4>Project by Alexander Tatarinov</h4>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class='gh-logo'>
+                        <img src='grace_hopper_academy.png'></img>
+                    </div>
+                </div>
+              </div>
         </div>
-    </div>
 
+
+      <div>  
+    </div> 
+    <!-- JS file  -->
+    <script type = "text/javascript" src="GuessingGame.js"></script>
   </body>
 </html>
